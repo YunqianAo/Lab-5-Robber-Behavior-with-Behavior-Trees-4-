@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: Robber
+  m_EditorClassIdentifier: 
+  brickName: Assets/BehaviorBricks/Samples/QuickStartGuide/Done/Resources/Behaviors/Robber.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"50e4a87fbc881d64cbb2b8917670b933\" nextId=\"12\">\r\n      <root>\r\n       
+    <RepeatDecorator id=\"2\" />\r\n      </root>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"game object\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"False\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n    <RepeatDecorator
+    id=\"2\" loops=\"-1\" policy=\"ContinueWhenChildFails\">\r\n      <child>\r\n       
+    <PrioritySelectorNode id=\"7\" />\r\n      </child>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n    <PrioritySelectorNode
+    id=\"7\">\r\n      <children>\r\n        <elem>\r\n          <GuardAndNode>\r\n           
+    <guard>\r\n              <ConditionEvalNode id=\"11\" />\r\n            </guard>\r\n           
+    <child>\r\n              <ActionNode id=\"10\" />\r\n            </child>\r\n         
+    </GuardAndNode>\r\n        </elem>\r\n        <elem>\r\n          <GuardAndNode>\r\n           
+    <guard>\r\n              <ConditionEvalNode id=\"9\" />\r\n            </guard>\r\n           
+    <child>\r\n              <SubbehaviorNode id=\"8\" />\r\n            </child>\r\n         
+    </GuardAndNode>\r\n        </elem>\r\n      </children>\r\n      <inputParams
+    />\r\n      <outputParams />\r\n      <localParams />\r\n    </PrioritySelectorNode>\r\n   
+    <ConditionEvalNode id=\"11\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"Perception/IsTargetCloseAndInSight\">\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
+    <ActionNode id=\"10\" action=\"MyActions/Hide\">\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"game object\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"game object\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
+    <entry name=\"hide\" type=\"UnityEngine.Vector3\" isBlackboard=\"True\" blackboard=\"\"
+    />\r\n        </outputValues>\r\n      </outputParams>\r\n      <localParams
+    />\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"9\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\"
+    name=\"AlwaysTrue\">\r\n      <inputParams />\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </ConditionEvalNode>\r\n    <SubbehaviorNode id=\"8\">\r\n     
+    <_guid>8adfddffa70852a45ba1b64354494e3c</_guid>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"wanderArea\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"False\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </SubbehaviorNode>\r\n  </runtimeInfo>\r\n 
+    <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"Robber\" _description=\"\"
+    _removeIfClosed=\"False\">\r\n      <_rootList>\r\n        <elem>\r\n         
+    <RepeatDecorator id=\"2\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <PrioritySelectorNode id=\"7\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <SubbehaviorNode id=\"8\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ConditionEvalNode id=\"9\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"10\" />\r\n        </elem>\r\n        <elem>\r\n          <ConditionEvalNode
+    id=\"11\" />\r\n        </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n       
+    <nodes>\r\n          <PrioritySelectorNode id=\"7\" />\r\n          <RepeatDecorator
+    id=\"2\" />\r\n          <SubbehaviorNode id=\"8\" />\r\n          <ConditionEvalNode
+    id=\"9\" />\r\n          <ActionNode id=\"10\" />\r\n          <ConditionEvalNode
+    id=\"11\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
+    <RepeatDecorator id=\"2\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"495.3332 10.83327\" name=\"Repeat\" description=\"Repeats
+    the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"2\" />\r\n       
+    </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <PrioritySelectorNode
+    id=\"7\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"399.3331 181.5001\" name=\"Priority Selector\" description=\"\" cardinality=\"1\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode
+    id=\"7\" />\r\n          <RepeatDecorator id=\"2\" />\r\n        </data>\r\n     
+    </_data>\r\n    </PrioritySelectorNode>\r\n    <ConditionEvalNode id=\"11\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"212.6666
+    344.7381\" name=\"Perception/IsTargetCloseAndInSight\" description=\"Eval\" cardinality=\"1\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode
+    id=\"11\" />\r\n          <PrioritySelectorNode id=\"7\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"10\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"212.6666 344.7381\" name=\"MyActions/Hide\"
+    description=\"Get the Vector3 for hiding.\" cardinality=\"0\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"10\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"9\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"582.0001 340.8331\" name=\"AlwaysTrue\"
+    description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ConditionEvalNode id=\"9\" />\r\n          <PrioritySelectorNode
+    id=\"7\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   
+    <SubbehaviorNode id=\"8\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"582.0001 340.8331\" name=\"DoneWander\" description=\"Wanders
+    to random positions around a NavMesh area.\" cardinality=\"-1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode id=\"8\" />\r\n       
+    </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 1
+  subslist:
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: 8adfddffa70852a45ba1b64354494e3c, type: 2}
+  _guid: 50e4a87fbc881d64cbb2b8917670b933

@@ -1086,7 +1086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTasksPerTick: 500
-  behavior: {fileID: 0}
+  behavior: {fileID: 11400000, guid: 50e4a87fbc881d64cbb2b8917670b933, type: 2}
   paused: 0
   restartWhenFinished: 0
   blackboard:
@@ -1105,8 +1105,10 @@ MonoBehaviour:
     colorParams: []
     colorParamsNames: []
     colorParamsLostDefaultValue: 
-    objectParams: []
-    objectParamsNames: []
+    objectParams:
+    - {fileID: 859428156}
+    objectParamsNames:
+    - game object
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []

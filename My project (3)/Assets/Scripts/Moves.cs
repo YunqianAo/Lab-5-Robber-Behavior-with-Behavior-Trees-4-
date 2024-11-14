@@ -13,6 +13,8 @@ public class Moves : MonoBehaviour
     public Collider floor;
     GameObject[] hidingSpots;
     NavMeshAgent agent;
+    Vector3 chosenHidingSpotPosition;
+
 
     void Start()
     {
@@ -84,7 +86,10 @@ public class Moves : MonoBehaviour
 
         Seek(targetWorld);
     }
-
+    public Vector3 HideValue()
+    {
+        return chosenHidingSpotPosition;
+    }
     public void Hide()
     {
         float dist = Mathf.Infinity;
@@ -114,6 +119,6 @@ public class Moves : MonoBehaviour
 
 
         Seek(info.point + chosenDir.normalized);
-
+        chosenHidingSpotPosition = chosenSpot;
     }
 }
